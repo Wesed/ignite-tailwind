@@ -6,7 +6,7 @@ import { SelectItem } from '@/components/Form/Select/SelectItem'
 import { TextArea } from '@/components/Form/TextArea'
 import { Label } from '@/components/Form/Label'
 import { ComponentProps } from 'react'
-import { ButtonForm } from './ButtonForm'
+import { Button } from './Button'
 
 export interface FormProps extends ComponentProps<'form'> {
   id: string
@@ -106,28 +106,27 @@ export function Form({ id, ...props }: FormProps) {
               <SelectItem value="md" text="Markdown" />
             </Select>
             <div className="flex items-center gap-1">
-              <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+              <Button variant="ghost">
                 <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-              </button>
+              </Button>
 
-              <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+              <Button variant="ghost">
                 <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-              </button>
+              </Button>
 
-              <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+              <Button variant="ghost">
                 <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-              </button>
+              </Button>
 
-              <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+              <Button variant="ghost">
                 <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-              </button>
-
-              <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+              </Button>
+              <Button variant="ghost">
                 <ListOrdered
                   className="h-4 w-4 text-zinc-500"
                   strokeWidth={3}
                 />
-              </button>
+              </Button>
             </div>
           </div>
           <TextArea
@@ -149,7 +148,14 @@ export function Form({ id, ...props }: FormProps) {
         </FileInput.Root>
       </div>
 
-      <ButtonForm />
+      <div className="flex items-center justify-end gap-2 pt-5">
+        <Button variant="outline" type="button">
+          Cancel
+        </Button>
+        <Button variant="primary" type="submit" form="settings">
+          Save
+        </Button>
+      </div>
     </form>
   )
 }

@@ -1,4 +1,4 @@
-import { ButtonForm } from '@/components/Form/ButtonForm'
+import { Button } from '@/components/Form/Button'
 import { Form } from '@/components/Form/Form'
 import { SettingsTabs } from '@/components/SettingsTabs'
 
@@ -16,7 +16,14 @@ export default function Home() {
             Update your photo and personal details here.
           </span>
         </div>
-        <ButtonForm form="settings" />
+        <div className="flex items-center gap-2">
+          <Button variant="outline" type="button">
+            Cancel
+          </Button>
+          <Button variant="primary" type="submit" form="settings">
+            Save
+          </Button>
+        </div>
       </div>
 
       <Form id="Settings" />
