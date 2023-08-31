@@ -9,7 +9,7 @@ export default function Home() {
 
       <SettingsTabs />
 
-      <div className="mt-6 flex items-center justify-between border-b border-zinc-200 py-5">
+      <div className="mt-6 flex flex-col justify-between gap-4 border-b border-zinc-200 py-5 lg:flex-row lg:items-center">
         <div className="space-y-1">
           <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
           <span className="text-sm text-zinc-500">

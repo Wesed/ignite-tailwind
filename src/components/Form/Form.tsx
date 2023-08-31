@@ -20,19 +20,22 @@ export function Form({ id, ...props }: FormProps) {
       {...props}
     >
       {/* Name */}
-      <div className="grid grid-cols-form gap-3">
+      <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form">
         <Label id="firstName" textLabel="Name" />
-        <div className="grid grid-cols-2 gap-6">
+        <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2">
           <Input.Root>
             <Input.Control id="firstName" defaultValue="Weslley" />
           </Input.Root>
-          <Input.Root>
-            <Input.Control id="lastName" defaultValue="Eduardo" />
-          </Input.Root>
+          <div className="flex flex-col gap-3 lg:block">
+            <Label id="lastName" textLabel="Lastname" className="lg:sr-only" />
+            <Input.Root>
+              <Input.Control id="lastName" defaultValue="Eduardo" />
+            </Input.Root>
+          </div>
         </div>
       </div>
       {/* Email */}
-      <div className="grid grid-cols-form gap-3 pt-5">
+      <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
         <Label id="email" textLabel="Email address" />
         <Input.Root>
           <Input.Prefix>
@@ -46,19 +49,19 @@ export function Form({ id, ...props }: FormProps) {
         </Input.Root>
       </div>
       {/* Your photo */}
-      <div className="grid grid-cols-form gap-3 pt-5">
+      <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
         <Label
           textLabel="Your photo"
           textSpan="his will be displayed on your profile."
         />
-        <FileInput.Root className="flex items-start gap-5">
+        <FileInput.Root className="flex flex-col gap-5 lg:flex-row lg:items-start">
           <FileInput.ImagePreview />
           <FileInput.Trigger />
           <FileInput.Control />
         </FileInput.Root>
       </div>
       {/* Role */}
-      <div className="grid grid-cols-form gap-3 pt-5">
+      <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
         <Label id="role" textLabel="Role" />
         <Input.Root>
           <Input.Prefix>
@@ -72,7 +75,7 @@ export function Form({ id, ...props }: FormProps) {
         </Input.Root>
       </div>
       {/* Country */}
-      <div className="grid grid-cols-form gap-3 pt-5">
+      <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
         <Label id="country" textLabel="Country" />
         <Select placeholder="Select a country...">
           <SelectItem value="br" text="Brazil" />
@@ -84,7 +87,7 @@ export function Form({ id, ...props }: FormProps) {
         </Select>
       </div>
       {/* Timezone */}
-      <div className="grid grid-cols-form gap-3 pt-5">
+      <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
         <Label id="timezone" textLabel="Timezone" />
         <Select placeholder="Select a timezone...">
           <SelectItem value="utc8" text="Pacific Standard Time (UTC-08:00)" />
@@ -92,7 +95,7 @@ export function Form({ id, ...props }: FormProps) {
         </Select>
       </div>
       {/* Bio */}
-      <div className="grid grid-cols-form gap-3 pt-5">
+      <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
         <Label
           id="email"
           textLabel="Bio"
@@ -100,7 +103,7 @@ export function Form({ id, ...props }: FormProps) {
         />
 
         <div className="space-y-3">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="flex flex-col gap-3 lg:grid lg:grid-cols-2">
             <Select defaultValue="normal">
               <SelectItem value="normal" text="Normal Text" />
               <SelectItem value="md" text="Markdown" />
@@ -136,7 +139,7 @@ export function Form({ id, ...props }: FormProps) {
         </div>
       </div>
       {/* Portfolio projects */}
-      <div className="grid grid-cols-form gap-3 pt-5">
+      <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
         <Label
           textLabel="Portfolio projects"
           textSpan="Share a few snippets of your work"

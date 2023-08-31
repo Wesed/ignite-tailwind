@@ -4,13 +4,20 @@ export interface LabelProps extends ComponentProps<'label'> {
   id?: string
   textLabel: string
   textSpan?: string
+  className?: string
 }
 
-export function Label({ id, textLabel, textSpan, ...props }: LabelProps) {
+export function Label({
+  id,
+  textLabel,
+  textSpan,
+  className = '',
+  ...props
+}: LabelProps) {
   return (
     <label
       htmlFor={id}
-      className="text-sm font-medium text-zinc-700"
+      className={'text-sm font-medium text-zinc-700 ' + className}
       {...props}
     >
       {textLabel}
