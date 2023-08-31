@@ -7,3 +7,5 @@ AutoAnimate: animar a maneira como os input files aparecem na lista
 tailwind variants: variedades de um component
 
 slots api: 
+
+tailwind merge: uma maneira de organizar as classes em linha 
