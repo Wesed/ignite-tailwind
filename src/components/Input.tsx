@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react'
-import { twMerge, twmerge } from 'tailwind-merge'
+import { twMerge } from 'tailwind-merge'
 
 // pattern de composicao: desmembra o componente em varias partes customizaveis
 

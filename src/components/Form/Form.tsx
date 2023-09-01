@@ -16,7 +16,7 @@ export function Form({ id, ...props }: FormProps) {
   return (
     <form
       id={id}
-      className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
+      className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200 dark:divide-zinc-700"
       {...props}
     >
       {/* Name */}
