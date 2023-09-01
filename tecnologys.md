@@ -9,3 +9,5 @@ tailwind variants: variedades de um component
 slots api: 
 
 tailwind merge: uma maneira de organizar as classes em linha 
+
+next-themes pra configurar o botao dark mode
